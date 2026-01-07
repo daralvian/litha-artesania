@@ -1,203 +1,187 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Litha – Artesanía Mágica en Madera</title>
+
+  <!-- ESTILOS PRINCIPALES -->
+  <style>
+    :root {
+      /* 🎨 Colores mágicos – puedes cambiarlos fácilmente */
+      --color-fondo: radial-gradient(circle at top, #2b0a3d, #0f051a);
+      --color-principal: #c77dff;
+      --color-secundario: #9d4edd;
+      --color-dorado: #f6c177;
+      --color-texto: #f5e9ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--color-fondo);
+      color: var(--color-texto);
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent);
+    }
+
+    header img {
+      max-width: 220px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 20px rgba(199,125,255,0.8));
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--color-principal);
+      text-shadow: 0 0 15px rgba(199,125,255,0.7);
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #e9d8ff;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .producto {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 0 30px rgba(157,78,221,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 40px rgba(199,125,255,0.6);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+
+    .producto h3 {
+      color: var(--color-dorado);
+      margin-bottom: 0.5rem;
+    }
+
+    .producto p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .precio {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: var(--color-principal);
+      font-weight: bold;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(199,125,255,0.7);
+      transition: transform 0.2s;
+    }
+
+    .boton:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0,0,0,0.4);
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--color-dorado);
+    }
   </style>
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Litha – Artesanía Mágica en Madera&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- ESTILOS PRINCIPALES --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>/* 🎨 Colores mágicos – puedes cambiarlos fácilmente */</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--color-fondo: radial-gradient(circle at top, #2b0a3d, #0f051a);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--color-principal: #c77dff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--color-secundario: #9d4edd;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--color-dorado: #f6c177;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--color-texto: #f5e9ff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--color-fondo);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--color-texto);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 3rem 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 220px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>filter: drop-shadow(0 0 20px rgba(199,125,255,0.8));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 3rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--color-principal);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-shadow: 0 0 15px rgba(199,125,255,0.7);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #e9d8ff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 4rem 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.productos {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.producto {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.05);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 30px rgba(157,78,221,0.3);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.3s, box-shadow 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.producto:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-8px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 40px rgba(199,125,255,0.6);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.producto img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.producto h3 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--color-dorado);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.producto p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.9;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.precio {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--color-principal);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.boton {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.6rem 1.4rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 15px rgba(199,125,255,0.7);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.boton:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.05);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,0.4);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 3rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer span {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--color-dorado);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- CABECERA / LOGO --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 🔁 Cambia el archivo del logo cuando quieras --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="logo-litha-definitivo.jpeg" alt="Logo Litha Artesanía Mágica" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Litha&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Artesanía mágica en madera • Hecho a mano con intención&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN DE PRODUCTOS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 style="text-align:center; margin-bottom:3rem; color: var(--color-secundario);"&gt;✨ Nuestros Productos ✨&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="productos"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- PRODUCTO 1 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="producto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="producto1.jpg" alt="Producto de madera" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Amuleto de Madera Sagrada&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Amuleto tallado a mano en madera natural, cargado con energía protectora.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="precio"&gt;25 €&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" class="boton"&gt;Comprar&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- PRODUCTO 2 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="producto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="producto2.jpg" alt="Producto de madera" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Caja Ritual&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Caja artesanal ideal para guardar objetos mágicos o rituales.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="precio"&gt;45 €&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" class="boton"&gt;Comprar&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- PRODUCTO 3 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="producto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="producto3.jpg" alt="Producto de madera" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Pentáculo Tallado&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Pieza decorativa y energética, perfecta para altar o protección.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="precio"&gt;30 €&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" class="boton"&gt;Comprar&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- PIE DE PÁGINA --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;© 2026 &lt;span&gt;Litha&lt;/span&gt; – Artesanía Mágica en Madera&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Creado con intención, magia y naturaleza 🌿&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <!-- CABECERA / LOGO -->
+  <header>
+    <!-- 🔁 Cambia el archivo del logo cuando quieras -->
+    <img src="logo-litha-definitivo.jpeg" alt="Logo Litha Artesanía Mágica" />
+    <h1>Litha</h1>
+    <p>Artesanía mágica en madera • Hecho a mano con intención</p>
+  </header>
+
+  <!-- SECCIÓN DE PRODUCTOS -->
+  <section>
+    <h2 style="text-align:center; margin-bottom:3rem; color: var(--color-secundario);">✨ Nuestros Productos ✨</h2>
+
+    <div class="productos">
+
+      <!-- PRODUCTO 1 -->
+      <div class="producto">
+        <img src="producto1.jpg" alt="Producto de madera" />
+        <h3>Amuleto de Madera Sagrada</h3>
+        <p>Amuleto tallado a mano en madera natural, cargado con energía protectora.</p>
+        <div class="precio">25 €</div>
+        <a href="#" class="boton">Comprar</a>
+      </div>
+
+      <!-- PRODUCTO 2 -->
+      <div class="producto">
+        <img src="producto2.jpg" alt="Producto de madera" />
+        <h3>Caja Ritual</h3>
+        <p>Caja artesanal ideal para guardar objetos mágicos o rituales.</p>
+        <div class="precio">45 €</div>
+        <a href="#" class="boton">Comprar</a>
+      </div>
+
+      <!-- PRODUCTO 3 -->
+      <div class="producto">
+        <img src="producto3.jpg" alt="Producto de madera" />
+        <h3>Pentáculo Tallado</h3>
+        <p>Pieza decorativa y energética, perfecta para altar o protección.</p>
+        <div class="precio">30 €</div>
+        <a href="#" class="boton">Comprar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2026 <span>Litha</span> – Artesanía Mágica en Madera</p>
+    <p>Creado con intención, magia y naturaleza 🌿</p>
+  </footer>
+
 </body>
 </html>
